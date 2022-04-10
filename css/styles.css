@@ -1,0 +1,158 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  display: grid;
+  grid-template-rows: 10% auto auto;
+  min-height: 100vh;
+  grid-template-columns: auto;
+  grid-template-areas:
+    "header"
+    "section"
+    "footer";
+}
+
+header {
+  background-color: red;
+  grid-area: header;
+}
+section {
+  background-color: lightgray;
+  grid-area: section;
+}
+footer {
+  background-color: white;
+  grid-area: footer;
+}
+
+img {
+  max-width: 100%;
+}
+.logo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.header__image {
+  display: inline-block;
+  margin-top: 1.5rem;
+  margin-bottom: 1rem;
+  width: 6rem;
+}
+nav .desktop__nav {
+  display: none;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-bottom: 0.3rem;
+}
+nav .desktop__nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav .header__nav {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+nav .header__nav a {
+  display: inline-block;
+  margin-top: 1.5rem;
+  text-decoration: none;
+  color: black;
+}
+.hero__container {
+  background-image: url(../imagenes/pizzalunaportada.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 540px;
+}
+.hero__text {
+  text-align: center;
+  font-size: 2.4rem;
+  margin-top: 3rem;
+}
+.footer__text {
+  margin: 1rem;
+}
+
+.footer .footer__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__image {
+  display: inline;
+  margin-top: 0.5rem;
+  width: 3rem;
+  text-align: center;
+}
+.footer__credits {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__credits img {
+  margin-bottom: 1rem;
+}
+.footer__credits p {
+  font-size: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+/*Menú*/
+
+.section__title {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 1.3rem;
+}
+.submenu {
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 3rem;
+  margin-left: 2rem;
+  margin-bottom: 5rem;
+}
+.menuContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+.cards {
+  margin-bottom: 2rem;
+}
+.card__image {
+  width: 15rem;
+}
+/*MEDIA QUERIES*/
+@media (min-width: 768px) {
+  nav .header__nav {
+    display: none;
+  }
+  nav .desktop__nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-bottom: 0.3rem;
+  }
+  nav .desktop__nav a {
+    text-decoration: none;
+    color: black;
+  }
+  .menuContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .cards {
+    margin-left: 3rem;
+  }
+}
