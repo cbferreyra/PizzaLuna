@@ -12,6 +12,7 @@ body {
     "header"
     "section"
     "footer";
+  transition: 2s;
 }
 
 header {
@@ -42,6 +43,10 @@ img {
   margin-bottom: 1rem;
   width: 6rem;
 }
+.logo :hover {
+  transform: rotatex(360deg);
+  transition: 2s;
+}
 nav .desktop__nav {
   display: none;
   flex-direction: row;
@@ -64,6 +69,10 @@ nav .header__nav a {
   text-decoration: none;
   color: black;
 }
+nav .header__nav :hover {
+  color: #ff0000;
+}
+
 .hero__container {
   background-image: url(../imagenes/pizzalunaportada.jpg);
   background-position: center;
@@ -71,11 +80,13 @@ nav .header__nav a {
   background-size: cover;
   height: 540px;
 }
+
 .hero__text {
   text-align: center;
   font-size: 2.4rem;
   margin-top: 3rem;
 }
+
 .footer__text {
   margin: 1rem;
 }
@@ -109,14 +120,43 @@ nav .header__nav a {
 .section__title {
   text-align: center;
   margin-top: 2rem;
-  font-size: 1.3rem;
+  font-size: 2rem;
 }
+
 .submenu {
+  display: inline block;
   text-align: center;
   font-size: 1rem;
   margin-top: 3rem;
   margin-left: 2rem;
   margin-bottom: 5rem;
+}
+.submenu h2 {
+  animation-duration: 8s;
+  animation-name: color;
+}
+@keyframes color {
+  0% {
+    color: #000;
+  }
+  15% {
+    color: #3a0000;
+  }
+  25% {
+    color: #920000;
+  }
+  50% {
+    color: #ff0000;
+  }
+  75% {
+    color: #920000;
+  }
+  85% {
+    color: #3a0000;
+  }
+  100% {
+    color: #000;
+  }
 }
 .menuContainer {
   display: flex;
